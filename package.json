@@ -1,0 +1,79 @@
+{
+  "name": "binary-editor",
+  "version": "1.0.0",
+  "description": "Binary — Professional Desktop Code Editor. Code. Build. Execute.",
+  "main": "dist-electron/main/main.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "node scripts/kill-port.mjs && concurrently -k \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "dev:renderer": "vite",
+    "dev:electron": "node scripts/dev-electron.mjs",
+    "build": "npm run build:electron && vite build",
+    "build:electron": "node scripts/build-electron.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:extensions": "node scripts/run-tests.mjs",
+    "parse:manifest": "node scripts/run-inspect.mjs",
+    "postinstall": "node scripts/patch-node-pty.mjs",
+    "package": "npm run build && electron-builder"
+  },
+  "keywords": [
+    "editor",
+    "ide",
+    "electron",
+    "developer-tools",
+    "code-editor",
+    "monaco"
+  ],
+  "author": "Binary Team",
+  "license": "MIT",
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/addon-web-links": "^0.11.0",
+    "@xterm/xterm": "^5.5.0",
+    "adm-zip": "^0.6.0",
+    "chokidar": "^3.6.0",
+    "highlight.js": "^11.12.0",
+    "lucide-react": "^0.378.0",
+    "node-pty": "^1.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "semver": "^7.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^29.3.1",
+    "electron-builder": "^24.13.3",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.9.3",
+    "vite": "^5.2.10",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.binary.code.ai",
+    "productName": "Binary",
+    "directories": {
+      "output": "release"
+    },
+    "extraResources": [
+      {
+        "from": "resources/toolchains/windows-x64",
+        "to": "toolchains/windows-x64",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "./public/logo.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

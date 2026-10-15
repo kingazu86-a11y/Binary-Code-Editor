@@ -1,0 +1,37 @@
+{
+  "appId": "com.binary.editor",
+  "productName": "Binary",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/toolchains/windows-x64",
+      "to": "toolchains/windows-x64",
+      "filter": ["**/*"]
+    }
+  ],
+  "icon": "public/logo.png",
+  "win": {
+    "target": "nsis",
+    "icon": "public/logo.png"
+  },
+  "mac": {
+    "icon": "public/logo.png"
+  },
+  "linux": {
+    "icon": "public/logo.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  }
+}
+

@@ -1,0 +1,819 @@
+:root {
+  --bg-main: #0D0F12;
+  --bg-panel: #111419;
+  --bg-panel-secondary: #161A22;
+  --bg-card: #1A1F29;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.08);
+
+  --border-color: #20242B;
+  --border-subtle: #191D24;
+  --border-focus: #3B82F6;
+
+  --text-primary: #E6EAF0;
+  --text-secondary: #8B929E;
+  --text-muted: #5C6370;
+
+  --accent-primary: #3B82F6;
+  --accent-primary-hover: #2563EB;
+  --accent-secondary: #6366F1;
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+
+  --tree-selected-bg: rgba(59, 130, 246, 0.2);
+  --tree-selected-hover-bg: rgba(59, 130, 246, 0.28);
+  --tree-selected-text: #FFFFFF;
+
+  --skeleton-base: rgba(255, 255, 255, 0.05);
+  --skeleton-highlight: rgba(255, 255, 255, 0.13);
+  --skeleton-border: rgba(255, 255, 255, 0.04);
+
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --color-success: #10B981;
+  --color-info: #06B6D4;
+
+  --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  --titlebar-height: 38px;
+  --activity-bar-width: 48px;
+  --statusbar-height: 24px;
+
+  /* Theme-specific UI Chrome Elements */
+  --bg-titlebar: #0A0C0F;
+  --border-titlebar: #1E232B;
+  --bg-titlebar-search: #161A22;
+  --bg-titlebar-search-kbd: #202632;
+
+  --bg-activity-bar: #090B0E;
+  --border-activity-bar: #1E232B;
+
+  --bg-statusbar: #0A0C0E;
+  --border-statusbar: #1E232B;
+  --text-statusbar: #8B929E;
+  --text-statusbar-muted: #5C6370;
+  --bg-statusbar-hover: rgba(255, 255, 255, 0.08);
+
+  --bg-tab-bar: #090B0E;
+  --bg-tab-active: #0D0F12;
+  --border-tab: #1E232B;
+
+  --bg-menu: #141820;
+  --border-menu: #252B35;
+  --shadow-menu: 0 10px 30px rgba(0, 0, 0, 0.6);
+
+  --bg-modal: #12151B;
+  --scrollbar-thumb: #252A34;
+  --scrollbar-thumb-hover: #3B4252;
+
+  /* VS Code Standard Theme Variable Compatibility */
+  --vscode-editor-background: var(--bg-main);
+  --vscode-editor-foreground: var(--text-primary);
+  --vscode-foreground: var(--text-primary);
+  --vscode-sideBar-background: var(--bg-panel);
+  --vscode-sideBar-border: var(--border-color);
+  --vscode-editorGroup-border: var(--border-color);
+  --vscode-button-background: var(--accent-primary);
+  --vscode-button-foreground: #ffffff;
+  --vscode-button-hoverBackground: var(--accent-primary-hover);
+  --vscode-button-secondaryBackground: var(--bg-card);
+  --vscode-button-secondaryForeground: var(--text-primary);
+  --vscode-textLink-foreground: var(--accent-primary);
+  --vscode-badge-background: var(--accent-primary);
+  --vscode-badge-foreground: #ffffff;
+}
+
+/* Theme: Binary Midnight (Sapphire Navy) */
+html[data-theme="binary-midnight"] {
+  --bg-main: #080C14;
+  --bg-panel: #0D131F;
+  --bg-panel-secondary: #131D30;
+  --bg-card: #182236;
+  --border-color: #1E2C44;
+  --border-subtle: #141F32;
+  --border-focus: #60A5FA;
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --accent-primary: #3B82F6;
+  --accent-primary-hover: #2563EB;
+  --accent-secondary: #818CF8;
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+
+  --tree-selected-bg: rgba(59, 130, 246, 0.22);
+  --tree-selected-hover-bg: rgba(59, 130, 246, 0.3);
+  --tree-selected-text: #FFFFFF;
+  --skeleton-base: rgba(255, 255, 255, 0.05);
+  --skeleton-highlight: rgba(255, 255, 255, 0.12);
+  --skeleton-border: rgba(255, 255, 255, 0.04);
+
+  --bg-titlebar: #070A11;
+  --border-titlebar: #172338;
+  --bg-titlebar-search: #101726;
+  --bg-titlebar-search-kbd: #182338;
+
+  --bg-activity-bar: #06080E;
+  --border-activity-bar: #172338;
+
+  --bg-statusbar: #0B101B;
+  --border-statusbar: #172338;
+  --text-statusbar: #94A3B8;
+  --text-statusbar-muted: #64748B;
+  --bg-statusbar-hover: rgba(59, 130, 246, 0.12);
+
+  --bg-tab-bar: #090E17;
+  --bg-tab-active: #080C14;
+  --border-tab: #172338;
+
+  --bg-menu: #0F1726;
+  --border-menu: #223350;
+  --shadow-menu: 0 12px 32px rgba(2, 6, 23, 0.7);
+
+  --bg-modal: #0D1422;
+  --scrollbar-thumb: #1E2C44;
+  --scrollbar-thumb-hover: #2B3D5E;
+}
+
+/* Theme: Binary Cyber (Obsidian Slate) */
+html[data-theme="binary-cyber"] {
+  --bg-main: #06090E;
+  --bg-panel: #0B1118;
+  --bg-panel-secondary: #101923;
+  --bg-card: #152230;
+  --border-color: #1E293B;
+  --border-subtle: #111827;
+  --border-focus: #38BDF8;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --accent-primary: #0EA5E9;
+  --accent-primary-hover: #0284C7;
+  --accent-secondary: #06B6D4;
+  --accent-subtle: rgba(14, 165, 233, 0.15);
+
+  --tree-selected-bg: rgba(14, 165, 233, 0.22);
+  --tree-selected-hover-bg: rgba(14, 165, 233, 0.3);
+  --tree-selected-text: #FFFFFF;
+  --skeleton-base: rgba(255, 255, 255, 0.05);
+  --skeleton-highlight: rgba(255, 255, 255, 0.12);
+  --skeleton-border: rgba(255, 255, 255, 0.04);
+
+  --bg-titlebar: #05070B;
+  --border-titlebar: #16202E;
+  --bg-titlebar-search: #0E1620;
+  --bg-titlebar-search-kbd: #172334;
+
+  --bg-activity-bar: #040609;
+  --border-activity-bar: #16202E;
+
+  --bg-statusbar: #080D14;
+  --border-statusbar: #16202E;
+  --text-statusbar: #94A3B8;
+  --text-statusbar-muted: #64748B;
+  --bg-statusbar-hover: rgba(14, 165, 233, 0.12);
+
+  --bg-tab-bar: #070B10;
+  --bg-tab-active: #06090E;
+  --border-tab: #16202E;
+
+  --bg-menu: #0D1520;
+  --border-menu: #1F2E42;
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.7);
+
+  --bg-modal: #0C131D;
+  --scrollbar-thumb: #1E293B;
+  --scrollbar-thumb-hover: #334155;
+}
+
+/* Theme: Binary Light (Modern Clean Light) */
+html[data-theme="binary-light"] {
+  --bg-main: #FFFFFF;
+  --bg-panel: #F8FAFC;
+  --bg-panel-secondary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-hover: rgba(15, 23, 42, 0.05);
+  --bg-active: rgba(15, 23, 42, 0.08);
+
+  --border-color: #E2E8F0;
+  --border-subtle: #EDF2F7;
+  --border-focus: #2563EB;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+
+  --accent-primary: #2563EB;
+  --accent-primary-hover: #1D4ED8;
+  --accent-secondary: #4F46E5;
+  --accent-subtle: rgba(37, 99, 235, 0.08);
+
+  --tree-selected-bg: rgba(37, 99, 235, 0.15);
+  --tree-selected-hover-bg: rgba(37, 99, 235, 0.22);
+  --tree-selected-text: #0F172A;
+
+  --skeleton-base: rgba(0, 0, 0, 0.05);
+  --skeleton-highlight: rgba(0, 0, 0, 0.12);
+  --skeleton-border: rgba(0, 0, 0, 0.06);
+
+  --color-danger: #DC2626;
+  --color-warning: #D97706;
+  --color-success: #059669;
+  --color-info: #0284C7;
+
+  --bg-titlebar: #F8FAFC;
+  --border-titlebar: #E2E8F0;
+  --bg-titlebar-search: #FFFFFF;
+  --bg-titlebar-search-kbd: #F1F5F9;
+
+  --bg-activity-bar: #F1F5F9;
+  --border-activity-bar: #E2E8F0;
+
+  --bg-statusbar: #2563EB;
+  --border-statusbar: #1D4ED8;
+  --text-statusbar: #FFFFFF;
+  --text-statusbar-muted: rgba(255, 255, 255, 0.8);
+  --bg-statusbar-hover: rgba(255, 255, 255, 0.15);
+
+  --bg-tab-bar: #F1F5F9;
+  --bg-tab-active: #FFFFFF;
+  --border-tab: #E2E8F0;
+
+  --bg-menu: #FFFFFF;
+  --border-menu: #CBD5E1;
+  --shadow-menu: 0 10px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+
+  --bg-modal: #FFFFFF;
+  --scrollbar-thumb: #CBD5E1;
+  --scrollbar-thumb-hover: #94A3B8;
+
+  --vscode-editor-background: #FFFFFF;
+  --vscode-editor-foreground: #0F172A;
+  --vscode-foreground: #0F172A;
+  --vscode-sideBar-background: #F8FAFC;
+  --vscode-sideBar-border: #E2E8F0;
+  --vscode-editorGroup-border: #E2E8F0;
+  --vscode-button-background: #2563EB;
+  --vscode-button-foreground: #FFFFFF;
+  --vscode-button-hoverBackground: #1D4ED8;
+  --vscode-button-secondaryBackground: #F1F5F9;
+  --vscode-button-secondaryForeground: #0F172A;
+  --vscode-textLink-foreground: #2563EB;
+  --vscode-badge-background: #2563EB;
+  --vscode-badge-foreground: #FFFFFF;
+}
+
+/* Theme: Binary Nord (Arctic Slate) */
+html[data-theme="binary-nord"] {
+  --bg-main: #242933;
+  --bg-panel: #2E3440;
+  --bg-panel-secondary: #3B4252;
+  --bg-card: #434C5E;
+  --border-color: #4C566A;
+  --border-subtle: #3B4252;
+  --border-focus: #88C0D0;
+  --text-primary: #ECEFF4;
+  --text-secondary: #D8DEE9;
+  --text-muted: #7B88A1;
+  --accent-primary: #88C0D0;
+  --accent-primary-hover: #81A1C1;
+  --accent-secondary: #5E81AC;
+  --accent-subtle: rgba(136, 192, 208, 0.15);
+
+  --tree-selected-bg: rgba(136, 192, 208, 0.22);
+  --tree-selected-hover-bg: rgba(136, 192, 208, 0.3);
+  --tree-selected-text: #FFFFFF;
+
+  --bg-titlebar: #1E222B;
+  --border-titlebar: #3B4252;
+  --bg-titlebar-search: #2E3440;
+  --bg-titlebar-search-kbd: #3B4252;
+
+  --bg-activity-bar: #1C2028;
+  --border-activity-bar: #3B4252;
+
+  --bg-statusbar: #1E222B;
+  --border-statusbar: #3B4252;
+  --text-statusbar: #D8DEE9;
+  --text-statusbar-muted: #7B88A1;
+  --bg-statusbar-hover: rgba(136, 192, 208, 0.12);
+
+  --bg-tab-bar: #20252E;
+  --bg-tab-active: #242933;
+  --border-tab: #3B4252;
+
+  --bg-menu: #2E3440;
+  --border-menu: #4C566A;
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  --bg-modal: #2E3440;
+  --scrollbar-thumb: #3B4252;
+  --scrollbar-thumb-hover: #4C566A;
+}
+
+/* Theme: Binary Monokai (Pro Charcoal) */
+html[data-theme="binary-monokai"] {
+  --bg-main: #1E1F1C;
+  --bg-panel: #272822;
+  --bg-panel-secondary: #33342B;
+  --bg-card: #3E3D32;
+  --border-color: #49483E;
+  --border-subtle: #34332B;
+  --border-focus: #A6E22E;
+  --text-primary: #F8F8F2;
+  --text-secondary: #A6A495;
+  --text-muted: #75715E;
+  --accent-primary: #A6E22E;
+  --accent-primary-hover: #88BD19;
+  --accent-secondary: #66D9EF;
+  --accent-subtle: rgba(166, 226, 46, 0.15);
+
+  --tree-selected-bg: rgba(166, 226, 46, 0.22);
+  --tree-selected-hover-bg: rgba(166, 226, 46, 0.3);
+  --tree-selected-text: #FFFFFF;
+
+  --bg-titlebar: #171815;
+  --border-titlebar: #383730;
+  --bg-titlebar-search: #272822;
+  --bg-titlebar-search-kbd: #33342B;
+
+  --bg-activity-bar: #141412;
+  --border-activity-bar: #383730;
+
+  --bg-statusbar: #171815;
+  --border-statusbar: #383730;
+  --text-statusbar: #A6A495;
+  --text-statusbar-muted: #75715E;
+  --bg-statusbar-hover: rgba(166, 226, 46, 0.12);
+
+  --bg-tab-bar: #1A1B18;
+  --bg-tab-active: #1E1F1C;
+  --border-tab: #383730;
+
+  --bg-menu: #272822;
+  --border-menu: #49483E;
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.6);
+
+  --bg-modal: #272822;
+  --scrollbar-thumb: #3E3D32;
+  --scrollbar-thumb-hover: #49483E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+/* Enable text selection for chat messages, code blocks, inputs, and textareas */
+input,
+textarea,
+pre,
+code,
+.chat-selectable,
+.chat-selectable * {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  zoom: var(--ui-scale, 1);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb, #252A34);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover, #3B4252);
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: var(--text-primary);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 1px var(--accent-primary);
+}
+
+option {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* Common IDE layouts */
+.binary-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}
+
+.binary-main-body {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - var(--titlebar-height) - var(--statusbar-height));
+  position: relative;
+  overflow: hidden;
+}
+
+.binary-content-area {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Drag Handles / Splitters */
+.resizer-x {
+  width: 4px;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 20;
+  transition: background 0.2s ease;
+}
+
+.resizer-x:hover, .resizer-x.resizing {
+  background: var(--accent-primary);
+}
+
+.resizer-y {
+  height: 4px;
+  cursor: row-resize;
+  background: transparent;
+  z-index: 20;
+  transition: background 0.2s ease;
+}
+
+.resizer-y:hover, .resizer-y.resizing {
+  background: var(--accent-primary);
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 0.85s linear infinite !important;
+  transform-origin: center center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 0.85s linear infinite !important;
+  transform-origin: center center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s ease-out forwards;
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 1.5s infinite ease-in-out;
+}
+
+/* Linear Indeterminate Progress Bar for Downloads and File Loading */
+@keyframes progressBarIndeterminate {
+  0% {
+    left: -40%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -50%;
+  }
+  100% {
+    left: 100%;
+    right: -50%;
+  }
+}
+
+.progress-bar-indeterminate {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(59, 130, 246, 0.12);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.progress-bar-indeterminate::before {
+  content: '';
+  position: absolute;
+  background: var(--accent-primary);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  will-change: left, right;
+  animation: progressBarIndeterminate 1.4s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+/* ================= POPUP & CONTEXT MENU ALIGNMENT ================= */
+.context-menu,
+.popup-menu,
+.dropdown-menu,
+[role="menu"] {
+  text-align: left !important;
+}
+
+.context-menu button,
+.popup-menu button,
+.dropdown-menu button,
+[role="menu"] button,
+.menu-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+/* Checkerboard background pattern for transparent images & SVGs - Subtle & Minimalist */
+.checkerboard-pattern {
+  background-color: #0E1015;
+  background-image:
+    linear-gradient(45deg, #151820 25%, transparent 25%),
+    linear-gradient(-45deg, #151820 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #151820 75%),
+    linear-gradient(-45deg, transparent 75%, #151820 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* ── Toolbar buttons (Image viewer / SVG editor) ──────────────────── */
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  white-space: nowrap;
+}
+.toolbar-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+.toolbar-btn-active,
+.toolbar-btn.toolbar-btn-active {
+  background: var(--bg-active) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Spin / loading animations ────────────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Professional Skeleton Shimmer System ─────────────────────────── */
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmerPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes appEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.998);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.shimmer-element {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--skeleton-base);
+  background-image: linear-gradient(
+    90deg,
+    var(--skeleton-base) 0%,
+    var(--skeleton-base) 20%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-base) 80%,
+    var(--skeleton-base) 100%
+  );
+  background-size: 250% 100%;
+  animation: shimmerSweep 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  border-radius: 4px;
+}
+
+.shimmer-pulse {
+  animation: shimmerPulse 2s ease-in-out infinite;
+}
+
+.app-fade-in {
+  animation: appEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── File Explorer Tree Item Highlight & Interaction ─────────────── */
+.file-tree-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-primary);
+  background-color: transparent;
+  border-left: 2px solid transparent;
+  box-sizing: border-box;
+  transition: background-color 0.1s ease, border-left-color 0.1s ease, color 0.1s ease;
+  user-select: none;
+}
+
+.file-tree-row:hover {
+  background-color: var(--bg-hover);
+}
+
+.file-tree-row.selected {
+  background-color: var(--tree-selected-bg, rgba(59, 130, 246, 0.2)) !important;
+  border-left: 2px solid var(--accent-primary) !important;
+  color: var(--tree-selected-text, #ffffff) !important;
+  font-weight: 500;
+}
+
+.file-tree-row.selected:hover {
+  background-color: var(--tree-selected-hover-bg, rgba(59, 130, 246, 0.28)) !important;
+}
+
+.file-tree-row.selected .file-tree-label {
+  color: var(--tree-selected-text, #ffffff) !important;
+  font-weight: 500;
+}
+
+.file-tree-row.selected .file-tree-icon {
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.45));
+}
+
+/* ── Modal & Dialog Responsive Utilities ─────────────────────────── */
+.dialog-content-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+.dialog-content-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dialog-content-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dialog-content-scroll::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.dialog-content-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.dialog-text-wrap {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+/* ── Monaco Debugger Breakpoints & Execution Highlight ─────────────────── */
+.debug-breakpoint-glyph {
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.7);
+  cursor: pointer;
+}
+
+.debug-breakpoint-disabled-glyph {
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 50%;
+  border: 2px solid #8B929E;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.debug-current-line-glyph {
+  width: 0 !important;
+  height: 0 !important;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #F59E0B;
+  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.8));
+}
+
+.debug-current-line {
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  border-left: 3px solid #F59E0B !important;
+}
